@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Misconception Control Room</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="side-nav" aria-label="Presentation directory">
+        <div class="brand-lockup">
+          <button class="brand-mark" id="resetPresentation" type="button" aria-label="Reset presentation to the beginning">
+            <img src="./assets/icons/brand-control-room.png" alt="" />
+          </button>
+          <div>
+            <p class="eyebrow">Control Room</p>
+            <h1>AI Misconception Control Room</h1>
+          </div>
+        </div>
+
+        <div class="nav-tools" aria-label="Presentation tools">
+          <button class="nav-tool-button" id="fullscreenButton" type="button">
+            <img src="./assets/icons/mini-map.png" alt="" />
+            <span>Fullscreen</span>
+          </button>
+        </div>
+
+        <nav class="group-list" id="groupList"></nav>
+      </aside>
+
+      <main class="stage">
+        <header class="top-bar">
+          <button class="icon-button group-status-button" id="toggleNav" aria-label="Toggle directory">
+            <img id="topGroupIcon" src="./assets/icons/group-reality-gap.png" alt="" />
+          </button>
+          <div class="breadcrumb" id="breadcrumb"></div>
+          <div class="progress-chip" id="progressChip"></div>
+        </header>
+
+        <section class="overview-panel" id="overviewPanel" hidden>
+          <div class="section-heading">
+            <p class="eyebrow">Presentation Map</p>
+            <h2>Four groups, one shared AI literacy story</h2>
+          </div>
+          <div class="overview-grid" id="overviewGrid"></div>
+        </section>
+
+        <section class="beat-stage" id="beatStage">
+          <div class="beat-intro">
+            <div class="beat-copy">
+              <p class="eyebrow" id="groupEyebrow"></p>
+              <h2 id="beatTitle"></h2>
+              <p id="beatPurpose"></p>
+              <div class="detail-card" id="detailCard"></div>
+            </div>
+            <div class="mini-map" id="miniMap"></div>
+          </div>
+
+          <div class="beat-layout">
+            <section class="panel-board" id="panelBoard"></section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="image-zoom" id="imageZoom" aria-hidden="true">
+      <div class="image-zoom-frame" role="dialog" aria-modal="true" aria-label="Expanded comic image">
+        <button class="zoom-nav zoom-nav-left" id="imageZoomPrev" type="button"></button>
+        <button class="zoom-board-jump zoom-board-prev" id="imageZoomPrevBoard" type="button"></button>
+        <h2 id="imageZoomTitle"></h2>
+        <div class="image-zoom-content" id="imageZoomContent">
+          <img id="imageZoomImg" src="" alt="" />
+          <div class="image-zoom-table" id="imageZoomTable" hidden></div>
+        </div>
+        <button class="zoom-nav zoom-nav-right" id="imageZoomNext" type="button"></button>
+        <button class="zoom-board-jump zoom-board-next" id="imageZoomNextBoard" type="button"></button>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
